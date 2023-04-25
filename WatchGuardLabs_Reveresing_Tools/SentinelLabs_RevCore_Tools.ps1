@@ -6,9 +6,9 @@ Write-Host "Initializing chocolatey"
 choco feature enable -n allowGlobalConfirmation
 choco feature enable -n allowEmptyChecksums
 
-$Boxstarter.RebootOk=$true # Allow reboots?
-$Boxstarter.NoPassword=$false # Is this a machine with no login password?
-$Boxstarter.AutoLogin=$true # Save my password securely and auto-login after a reboot
+$Boxstarter.RebootOk=$true
+$Boxstarter.NoPassword=$false
+$Boxstarter.AutoLogin=$true
 if (Test-Path "C:\BGinfo\build.cfg" -PathType Leaf)
 {
     REG ADD "HKLM\Software\Microsoft\Windows NT\CurrentVersion\Winlogon" /v AutoAdminLogon /t REG_SZ /d 1 /f
