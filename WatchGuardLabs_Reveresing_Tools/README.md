@@ -1,1 +1,0 @@
-# SentinelLabs RevCore Tools
